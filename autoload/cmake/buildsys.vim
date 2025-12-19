@@ -271,7 +271,7 @@ function! s:ProcessArgString(args) abort
     " configuration so that the current build configuration is up to date before
     " setting the build directory.
     let source_dir = s:system.Path([s:buildsys.project_root], v:true)
-    let build_dir = s:system.Path([s:buildsys.path_to_current_config], v:true)
+    let build_dir = s:system.Path("build", v:true)
     " Return dictionary of options.
     let optdict = {}
     let optdict.opts = opts
